@@ -16,7 +16,7 @@ ANS: PROS:
         4. Wide varities of libraries available for all the software engineering fields
      CONS:
         1. As it is a interpreter languange it executes the code line by line making the execution speed slow
-        
+        2. Testing Purpose
         
 
 Q4. In what all domains can we use Python?
