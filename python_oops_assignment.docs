@@ -1,0 +1,220 @@
+## Python OOP Assignment
+Q1. What is the purpose of Python's OOP?
+
+ANS: OOPs concept in Python is used to have a program in the form of classes and objects. It makes the code reusable and clean. Main concepts in OOPs are Class, Object, Polymorphism, Abstraction, Encapsulation and Inheritance.
+
+Q2. Where does an inheritance search look for an attribute?
+
+ANS:
+Instance object 
+Class created from the instance
+Its superclasses
+
+Q3. How do you distinguish between a class object and an instance object?
+
+ANS: Class objects are variables that are defined within the class and not within the constructor but instance objects are created and will first check the constructor of that class when being called.
+
+Q4. What makes the first argument in a class’s method function special?
+
+ANS: self is the first argument passed to the __init__ method and all other methods used with the class. This self keyword is used to measure the current instance of the object
+
+Q5. What is the purpose of the init method?
+
+ANS: __init__() method is a constructor in the class. This function will be called every time when an instance is being called. It initializes all the objects attributes
+
+Q6. What is the process for creating a class instance?
+
+ANS:
+To create a instance of the class, create a class and call the class with some variable.
+
+Ex:
+
+Class Check:
+	Pass
+T1 = Check()
+
+T1 is the class instance
+
+Q7. What is the process for creating a class?
+
+Using the Class keyword and by defining the init functions and by defining the functions that are needed we can create a class. We can also create a dummy class by using the pass keyword.
+
+EX: 
+class Test:
+    # x = 20
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+        
+    def printValue(self):
+        print(self.a)
+        print(self.b)
+        
+t1 = Test(10,2022)
+t1.printValue()
+
+Q8. How would you define the superclasses of a class?
+
+ANS: superclass is just the parent class. Using the super() function within the subclass / child class we can inherit the features i.e attributes and functions of a parent class and use those for child class instances as well.
+
+Q9. What is the relationship between classes and modules?
+
+ANS: Modules are kind of packages or separate .py files. Classes are blueprint of a solution. We can use modules by importing the files into the main files. Modules is like a collection of classes, objects and attributes.
+
+Q10. How do you make instances and classes?
+
+CODE:
+Class Check:
+	Pass
+T1 = Check()
+
+Q11. Where and how should class attributes be created?
+
+ANS:  Class attribute can be used by all the instances created on that class. It should be created within the class but outside the constructor.
+
+Q12. Where and how are instance attributes created?
+
+ANS: Instance attributes are defined within the constructor of the class using the self parameter.
+
+Q13. What does the term "self" in a Python class mean?
+ANS: self is a must argument within a class for the constructor. All the instance attributes are defined using the self parameter within the class. 
+
+Q14. How does a Python class handle operator overloading?
+
+ANS: Operator overloading means adding some additional functionalities to the existing predefined function.
+
+Q15. When do you consider allowing operator overloading of your classes?
+
+ANS: Operator overloading is used at the place where we need some additional modification to the existing function. It provides users the feasibility to handle a predefined function
+
+Q16. What is the most popular form of operator overloading?
+
+ANS: ‘+’ operator is the most popular form of operator overloading. As ‘+’ operator adds to numbers when it is added inbetween two integers and concatenate strings when added between two strings.
+
+Q17. What are the two most important concepts to grasp in order to comprehend Python OOP code?
+
+ANS: Inheritance & Polymorphism are the 2 important key concepts in Python code.
+
+Q18. Describe three applications for exception processing.
+
+ANS: 
+Database connectivity
+API calls
+Arithmetic operations when divided by 0
+
+Q19. What happens if you don't do something extra to treat an exception?
+
+ANS: It will throw an error and the next lines of codes after the exception won't be implemented.
+
+Q20. What are your options for recovering from an exception in your script?
+
+ANS: Using Try, catch and finally block.
+
+Q21. Describe two methods for triggering exceptions in your script.
+
+ANS: Try and Raise are the two methods for triggering exceptions
+
+Q22. Identify two methods for specifying actions to be executed at termination time, regardless of  
+whether or not an exception exists.
+
+ANS: using Finally - this piece of code will execute whether or not an exception occurs and another method is using the else part, if an exception occurs it will move to the else part and the code under else will be executed.
+
+Q23. What is the purpose of the try statement?
+
+ANS: Try statement is used to check the block of code for any errors.
+
+Q24. What are the two most popular try statement variations?
+
+ANS:
+
+Try followed by that excep is one of the most used statements
+Try followed by except and then followed by else.
+
+
+Q25. What is the purpose of the raise statement?
+
+ANS: Raise statement is used to raise a custom error at the runtime. When added it stops the current flow of the code and will be moved to the exception block
+
+Q26. What does the assert statement do, and what other statement is it like?
+
+ANS: Assertion is more likely used to debug the code. It should be used in a place when something should never happen. It is more or less equal to the try exception block.
+
+Q27. What is the purpose of the with/as argument, and what other statement is it like?
+
+ANS: With statement is one of the efficient and cleaner ways to handle exceptions. It is similar to try catch blocks.
+
+Q28. What are *args, **kwargs?
+
+ANS: *args is used to handle any number of parameters to the input functions
+**kwargs is used to handle any number of keyword arguments
+
+Q29. How can I pass optional or keyword parameters from one function to another?
+
+ANS: By passing a default value in the function definition we can pass optional arguments when calling that particular function.
+
+CODE:
+
+Def func_1(a=true):
+	print(a)
+func_1()
+funct_1(false)
+OP: 
+True
+false
+
+Q30. What are Lambda Functions?
+
+Ans: Lambda function is a function without a function name where it is used for performing some small operations or manipulations.
+
+Code:
+
+X = lambda a: a*a
+print(X(4))
+
+OP:
+16
+
+Q31. Explain Inheritance in Python with an example?
+
+ANS: Inheritance is used for deriving the base class properties and use it within the child class.
+
+CODE:
+
+class OwnerDetails:
+  def __init__(self, ownerName, carName):
+    self.ownerName = ownerName
+    self.carName = carName
+
+  def printDetails(self):
+    print(self.ownerName, self.carName)
+
+class Car(OwnerDetails):
+  pass
+
+x = Student("Kannappan", "Ferrari")
+x.printname()
+
+OP:
+Kannappan
+Ferrari
+
+
+
+Q32. Suppose class C inherits from classes A and B as class C(A,B).Classes A and B both have their own versions of method func(). If we call func() from an object of 
+class C, which version gets invoked?
+
+ANS: AS per the order it will invoke the function within class A. as class A is the first parameter to be passed to the instance of the object.
+
+Q33. Which methods/functions do we use to determine the type of instance and inheritance?
+
+ANS: IsInstance() method is used to do the job
+
+Q34.Explain the use of the 'nonlocal' keyword in Python.
+
+ANS: nonlocal keyword is used to keep the variables affected within the nested function. It enables the scope of that variable within the nested function
+
+Q35. What is the global keyword?
+
+ANS: global keyword is used to set the variable throughout the code irrespective of the scope of that variable. The variables if it is declared outside a function or class, its scope is lost access to those functions and if a global keyword is present while declaring the variable it will impact if the variables values are changed.
+
+
